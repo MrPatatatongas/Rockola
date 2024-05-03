@@ -60,8 +60,41 @@ while Stop
             if (k==1) && (tc==10)
                 warndlg('Haz escogido la cancion de Badbunny - Otro atardecer')
                 K=1;    %este apuntador tiene inicializado la cancion 1
-                play(alpha)
-                Stop=0;
+                choice=menu('Que opcion deseas elegir:_','Play','Pausa','Reaundar','Stop','Salir');
+                switch estado
+                    case 1
+                        if choice==1
+                            play(alpha)
+                        else
+                            estado=2;
+                        end
+                    case 2
+                        if choice==2
+                            pause(alpha)
+                        else
+                            estado=3;
+                        end
+                    case 3
+                        if choice==3
+                            resume(alpha)
+                        else
+                            estado=4;
+                        end
+                    case 4
+                        if choice==4
+                            stop(alpha)
+                        else
+                            estado=5;
+                        end
+                    case 5
+                        if choice==5
+                            pause(1)
+                            Stop=0;
+                            pause(1)
+                        else
+                            estado=1;
+                        end
+                end
                 pause(0.25)
             else
                 estado=2;
