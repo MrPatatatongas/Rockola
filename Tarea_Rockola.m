@@ -71,6 +71,7 @@ while Stop
             if (k==2) && (tc==10)
                 warndlg('Haz escogido la cancion de David Guetta - Memories')
                 K=2;    %este apuntador tiene inicializado la cancion 1
+                play(alpha)
                 Stop=0;
                 pause(0.25)
             else
