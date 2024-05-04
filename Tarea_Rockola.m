@@ -60,7 +60,9 @@ while Stop
             if (k==1) && (tc==10)
                 warndlg('Haz escogido la cancion de Badbunny - Otro atardecer')
                 K=1;    %este apuntador tiene inicializado la cancion 1
-                Menu_rockola
+                while Stop
+                    Menu_rockola
+                end
                 pause(0.25)
             else
                 estado=2;
